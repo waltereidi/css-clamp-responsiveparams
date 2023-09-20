@@ -1,0 +1,47 @@
+.content {
+  flex-flow: column;
+
+  &--header {
+    height: 3em;
+    background-color: black;
+  }
+  &--banner {
+    height: 16em;
+    background-color: bisque;
+    display: flex;
+    justify-content: space-around;
+
+    &__content {
+      width: clamp(30em, 62vw, 90em);
+      height: clamp(6em, 9.6vw, 12em);
+      background-color: teal;
+    }
+  }
+  &--main {
+    flex-flow: row wrap;
+    display: flex;
+    &__menuLeft {
+      background-color: red;
+
+      .item {
+        width: 16em;
+        p {
+          display: inline;
+          font-size: clamp(1em, 3.2vw, 4em);
+        }
+      }
+    }
+    &__mainContent {
+      font-size: 2em;
+
+      label + input {
+        label {
+          color: red;
+        }
+        background-color: red;
+      }
+    }
+  }
+  &--footer {
+  }
+}
